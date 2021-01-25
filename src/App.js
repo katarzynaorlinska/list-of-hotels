@@ -1,7 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    fetch("https://services.lastminute.com/mobile/stubs/hotels")
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
+      .then((res) => console.log(res));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
