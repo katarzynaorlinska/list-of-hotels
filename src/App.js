@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 import Item from "./components/Item";
+import Error from "./components/Error";
+import Loaded from "./components/Loaded";
 
 function App() {
   const [error, setError] = useState(null);
@@ -23,9 +25,9 @@ function App() {
   }, []);
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error message={error.message} />;
   } else if (!isLoaded) {
-    return <div>Ładowanie...</div>;
+    return <Loaded />;
   } else {
     return (
       <ul>
