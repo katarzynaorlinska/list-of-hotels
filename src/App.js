@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import "./App.css";
+
 import Item from "./components/Item";
 import Error from "./components/Error";
 import Loaded from "./components/Loaded";
@@ -32,7 +34,7 @@ function App() {
     return (
       <ul>
         {items.map((item) => (
-          <Item id={item.id} name={item.name} cite={item.city} />
+          <Item id={item.id} name={item.name} city={item.location.city} images={item.images}  stars={item.stars}/>
         ))}
       </ul>
     );
