@@ -1,0 +1,17 @@
+.photoHotel{
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+}
+
+.containerHotel{
+    list-style: none;
+    height: 20vh;
+    background-color: white;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.rightBox p{
+    display: block;
+}
