@@ -1,10 +1,10 @@
-.photoHotel{
+.list__photo{
     width: 150px;
     height: 100px;
     padding: 10px;
 }
 
-.containerHotel{
+.list{
     list-style: none;
     height: 20vh;
     background-color: white;
@@ -12,6 +12,6 @@
     display: flex;
 }
 
-.rightBox p{
+.list__rightBox p{
     display: block;
 }
