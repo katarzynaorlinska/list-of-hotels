@@ -37,3 +37,13 @@ ul{
     color: #7cb3ae;
     cursor: pointer;
 }
+
+.list__content--off{
+    display: inline;
+    color:  #a2a6aa;
+}
+
+.list__content--active{
+    color: #7cb3ae;
+    display: inline;
+}

@@ -1,6 +1,12 @@
 import "./item.css";
 
 function Item(props) {
+
+  const numbers = [1, 2, 3, 4, 5];
+  const stars = numbers.map((number) =>
+  <div  className={((number>0)&&(number<=props.stars)) ? 'list__content--active' : 'list__content--off'}><i class="fas fa-star"></i></div>  
+  );
+
   return (
     <li key={props.id} className="list">
       <div className="list__leftBox">
@@ -9,7 +15,7 @@ function Item(props) {
       <div className="list__rightBox">
         <p className="list__content--name">{props.name}</p>
         <p className="list__content--city">{props.city}</p>
-        <p className="list__content--rate">Rate: {props.stars}</p>
+        <p className="list__content--rate">Rate: {stars}</p>
       </div>
     </li>
   );
