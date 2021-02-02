@@ -1,11 +1,11 @@
 ul{
-    width: 40vw;
+    max-width: 40vw;
     margin: 20px auto;
 }
 
 .list{
     list-style: none;
-    height: 20vh;
+    height: 25vh;
     background-color: white;
     margin-bottom: 10px;
     display: flex;
@@ -19,7 +19,7 @@ ul{
 }
 
 .list__photo{
-    width: 150px;
+    max-width: 150px;
     height: 100px;
     border-radius: 5px; 
     box-shadow: 0 0 2px 1px #7A7D80;
@@ -47,3 +47,27 @@ ul{
     color: #7cb3ae;
     display: inline;
 }
+
+@media screen and (max-width: 790px) {
+    .list {
+        height: 45vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+  }
+
+@media screen and (max-width: 430px) {
+    .list {
+        height: 30vh;
+        padding: 0 30px;
+      }
+    .list__leftBox{
+        padding: 0;
+    }
+    .list__photo{
+        display: none;
+    }
+  }
+  
