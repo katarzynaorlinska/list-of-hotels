@@ -4,7 +4,7 @@ function Item(props) {
 
   const numbers = [1, 2, 3, 4, 5];
   const stars = numbers.map((number) =>
-  <div  className={((number>0)&&(number<=props.stars)) ? 'list__content--active' : 'list__content--off'}><i class="fas fa-star"></i></div>  
+  <div  className={(number<=props.stars) ? 'list__content--active' : 'list__content--off'}><i class="fas fa-star"></i></div>  
   );
 
   return (
