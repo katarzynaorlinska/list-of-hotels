@@ -8,7 +8,7 @@ function Item(props) {
   );
 
   return (
-    <li key={props.id} className="list">
+    <li key={`hotel-element-main-list-${props.id}`} className="list"> 
       <div className="list__leftBox">
         <img src={props.images[0]} alt="hotel" className="list__photo"></img>
       </div>
