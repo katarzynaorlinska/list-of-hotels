@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
+import "./App.css";
+
 import Item from "./components/Item";
+import Error from "./components/Error";
+import Loaded from "./components/Loaded";
 
 function App() {
   const [error, setError] = useState(null);
@@ -23,14 +27,14 @@ function App() {
   }, []);
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error message={error.message} />;
   } else if (!isLoaded) {
-    return <div>Ładowanie...</div>;
+    return <Loaded />;
   } else {
     return (
       <ul>
         {items.map((item) => (
-          <Item id={item.id} name={item.name} cite={item.city} />
+          <Item id={item.id} name={item.name} city={item.location.city} images={item.images}  stars={item.stars}/>
         ))}
       </ul>
     );
