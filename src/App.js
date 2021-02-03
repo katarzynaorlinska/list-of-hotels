@@ -1,10 +1,12 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import "./App.css";
-
-import Item from "./components/Item";
+import List from "./components/List";
+import Hotel from "./components/Hotel";
 import Error from "./components/Error";
 import Loaded from "./components/Loaded";
+
+import "./App.css";
 
 function App() {
   const [error, setError] = useState(null);
@@ -32,11 +34,16 @@ function App() {
     return <Loaded />;
   } else {
     return (
-      <ul>
-        {items.map((item) => (
-          <Item id={item.id} name={item.name} city={item.location.city} images={item.images}  stars={item.stars}/>
-        ))}
-      </ul>
+      <Router>
+        <Switch>
+          <Route path="/hotel/:id">
+            <Hotel items={items} />
+          </Route>
+          <Route path="/">
+            <List items={items} />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }
