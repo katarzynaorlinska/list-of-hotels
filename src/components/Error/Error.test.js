@@ -4,9 +4,9 @@ import Error from "./index";
 
 const message = "example message";
 
-test("reder error message", () => {
+test("Render error message", () => {
   render(<Error message={message} />);
-  const errorElement = screen.getByText(`Error: ${message}`);
+  const errorElement = screen.getByText(message);
   expect(errorElement).toBeInTheDocument();
 });
 

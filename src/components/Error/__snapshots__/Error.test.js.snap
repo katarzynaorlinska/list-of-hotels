@@ -2,7 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  Error: 
-  example message
+  <h1>
+    Error: 
+  </h1>
+  <p>
+    example message
+  </p>
 </div>
 `;
