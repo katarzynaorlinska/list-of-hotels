@@ -1,22 +1,26 @@
 /* eslint-disable array-callback-return */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Item from "../Item";
 
 function List(props) {
   const [search, setSearch] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    if(search === ""){
+       return setSearchResults(props.items);
+    }
+    const results = props.items.filter(item =>
+      item.name.toLowerCase().includes(search.toLocaleLowerCase()));
+      setSearchResults(results);
+  }, [search, props.items]);
 
   return (
     <div>
       <input type="text" placeholder="Search hotel.." onChange={event => {setSearch(event.target.value)}}></input>
       <ul>
 
-        {props.items.filter((item) => {
-          if(search === ""){
-            return item
-          }else if(item.name.toLowerCase().includes(search.toLocaleLowerCase())){
-            return item
-          }
-        }).map((item) => (
+        {searchResults.map((item) => (
           <Item
             key={`hotel-element-main-list-${item.id}`}
             id={item.id}
