@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    placeholder="Search hotel.."
+    type="text"
+  />
+  <ul>
+    Item
+    Item
+    Item
+    Item
+    Item
+    Item
+    Item
+    Item
+    Item
+    Item
+  </ul>
+</div>
+`;
