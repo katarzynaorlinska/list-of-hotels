@@ -1,4 +1,4 @@
-import { create, act } from "react-test-renderer";
+import { create } from "react-test-renderer";
 import mockResponse from "../../mock/listHotel.json";
 import List from "./index";
 
@@ -9,9 +9,6 @@ jest.mock("../../hooks/useSearch", () => () => ({
 }));
 
 test("renders correctly", () => {
-  let tree;
-  act(() => {
-    tree = create(<List items={mockResponse.hotels} />);
-  });
-  expect(tree.toJSON()).toMatchSnapshot();
+  const tree = create(<List items={mockResponse.hotels} />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import Loading from "./index";
 
 test("Render loading page", () => {
-  render(<Loading/>);
+  render(<Loading />);
   const loadingElement = screen.getByText("Loading...");
   expect(loadingElement).toBeInTheDocument();
 });

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { create, act } from "react-test-renderer";
+import { create } from "react-test-renderer";
 import mockResponse from "../../mock/listHotel.json";
 import Item from "./index";
 
@@ -19,9 +19,6 @@ test("Render active stars", () => {
 });
 
 test("renders correctly", () => {
-  let tree;
-  act(() => {
-    tree = create(<Item {...mockResponse.hotels[0]} />);
-  });
-  expect(tree.toJSON()).toMatchSnapshot();
+  const tree = create(<Item {...mockResponse.hotels[0]} />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
