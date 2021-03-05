@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="hotel"
+  >
+    <div
+      className="hotel__name"
+    >
+      Cfajka
+    </div>
+    <div
+      className="hotel__container"
+    >
+      <div
+        className="hotel__leftBox"
+      >
+        <img
+          alt="hotel"
+          className="hotel__photo hotel__photo--big"
+          src="https://aff.bstatic.com/images/hotel/max500/102/102202664.jpg"
+        />
+        <div
+          className="hotel__leftBox--small"
+        >
+          <img
+            alt="hotel"
+            className="hotel__photo hotel__photo--small"
+            src="https://aff.bstatic.com/images/hotel/max500/102/102202628.jpg"
+          />
+          <img
+            alt="hotel"
+            className="hotel__photo hotel__photo--small"
+            src="https://aff.bstatic.com/images/hotel/max500/102/102202639.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="hotel__rightBox"
+      >
+        <p>
+          <b>
+            Adress:
+          </b>
+           
+          6 Hercules Road
+          , 
+          London
+        </p>
+        <p>
+          <b>
+            Check in:
+          </b>
+           
+          14:00
+           - 
+          20:00
+        </p>
+        <p>
+          <b>
+            Check out:
+          </b>
+           
+          07:00
+           - 
+          10:00
+        </p>
+        <p>
+          FontAwesomeIcon
+           
+          +39 24322342
+        </p>
+        <p>
+          FontAwesomeIcon
+           
+          park_plaza@gmail.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

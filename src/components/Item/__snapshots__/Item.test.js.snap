@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="list"
+>
+  <div
+    className="list__leftBox"
+  >
+    <img
+      alt="hotel"
+      className="list__photo"
+      src="https://aff.bstatic.com/images/hotel/max500/102/102202664.jpg"
+    />
+  </div>
+  <div
+    className="list__rightBox"
+  >
+    Link
+    <p
+      className="list__content--city"
+    />
+    <div
+      className="list__content--rate"
+    >
+      Rate: 
+      <div
+        className="list__content--active"
+      >
+        FontAwesomeIcon
+      </div>
+      <div
+        className="list__content--active"
+      >
+        FontAwesomeIcon
+      </div>
+      <div
+        className="list__content--active"
+      >
+        FontAwesomeIcon
+      </div>
+      <div
+        className="list__content--active"
+      >
+        FontAwesomeIcon
+      </div>
+      <div
+        className="list__content--off"
+      >
+        FontAwesomeIcon
+      </div>
+    </div>
+  </div>
+</li>
+`;
