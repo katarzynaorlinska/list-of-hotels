@@ -1,6 +1,6 @@
 # List of hotels App
 
-![App preview](./images/screen.png)
+![App preview](./screen.png)
 
 In the project directory, you can run:
 
